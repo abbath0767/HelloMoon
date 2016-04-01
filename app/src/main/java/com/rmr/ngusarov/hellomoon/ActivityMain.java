@@ -1,9 +1,9 @@
 package com.rmr.ngusarov.hellomoon;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 
-public class ActivityMain extends AppCompatActivity {
+public class ActivityMain extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
