@@ -16,7 +16,7 @@
         android:layout_weight="0">
 
         <Button
-            android:id="@+id/hellomoon_play_button"
+            android:id="@+id/hello_moon_play_button"
             android:text="@string/hellomoon_play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
