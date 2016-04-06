@@ -1,6 +1,7 @@
 package com.rmr.ngusarov.hellomoon;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ public class FragmentHelloMoon extends Fragment {
 
     private Button mPlayButton;
     private Button mStopButton;
+    private Button mPlayVideoButton;
     private MoonPlayer mMoonPlayer = new MoonPlayer();
 
     @Override
@@ -39,6 +41,15 @@ public class FragmentHelloMoon extends Fragment {
             public void onClick(View v) {
                 mMoonPlayer.stop();
                 mPlayButton.setText(R.string.hellomoon_play);
+            }
+        });
+
+        mPlayVideoButton = (Button) v.findViewById(R.id.hello_moon_play_video_button);
+        mPlayVideoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), ActivityVideo.class);
+                startActivity(i);
             }
         });
 

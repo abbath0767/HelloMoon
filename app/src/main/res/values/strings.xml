@@ -3,5 +3,6 @@
     <string name="hellomoon_play">Play</string>
     <string name="hellomoon_stop">Stop</string>
     <string name="hellomoon_pause">Pause</string>
+    <string name="hellomoon_play_video">Play Video</string>
     <string name="hellomoon_discription">Niel Armstrong stepping onto the moon</string>
 </resources>
