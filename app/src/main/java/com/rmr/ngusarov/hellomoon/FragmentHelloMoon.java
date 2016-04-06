@@ -23,7 +23,13 @@ public class FragmentHelloMoon extends Fragment {
         mPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mMoonPlayer.play(getActivity());
+                if (mPlayButton.getText().equals("Play")) {
+                    mMoonPlayer.play(getActivity());
+                    mPlayButton.setText(R.string.hellomoon_pause);
+                } else {
+                    mMoonPlayer.pause();
+                    mPlayButton.setText(R.string.hellomoon_play);
+                }
             }
         });
 
@@ -32,6 +38,7 @@ public class FragmentHelloMoon extends Fragment {
             @Override
             public void onClick(View v) {
                 mMoonPlayer.stop();
+                mPlayButton.setText(R.string.hellomoon_play);
             }
         });
 

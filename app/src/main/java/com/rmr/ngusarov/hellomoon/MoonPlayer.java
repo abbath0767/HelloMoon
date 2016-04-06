@@ -16,6 +16,10 @@ public class MoonPlayer {
     }
 
     public void play(Context context) {
+        if (mPlayer != null) {
+            mPlayer.start();
+            return;
+        }
         mPlayer = MediaPlayer.create(context, R.raw.one_small_step);
         Log.d(FragmentHelloMoon.TAG, "Player Audio Start");
 
@@ -27,5 +31,13 @@ public class MoonPlayer {
         });
 
         mPlayer.start();
+    }
+
+    public void pause() {
+        if (mPlayer != null) {
+            Log.d(FragmentHelloMoon.TAG, "Player Audio Pause");
+            mPlayer.pause();
+        }
+        return;
     }
 }
