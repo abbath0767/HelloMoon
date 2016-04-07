@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Привет Луна</string>
+    <string name="hellomoon_play">Играть</string>
+    <string name="hellomoon_stop">Стоп</string>
+    <string name="hellomoon_pause">Пауза</string>
+    <string name="hellomoon_play_video">Играть видео</string>
+    <string name="hellomoon_discription">Niel Armstrong stepping onto the moon</string>
+</resources>

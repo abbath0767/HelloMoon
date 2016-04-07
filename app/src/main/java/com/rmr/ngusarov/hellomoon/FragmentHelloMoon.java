@@ -16,16 +16,29 @@ public class FragmentHelloMoon extends Fragment {
     private Button mStopButton;
     private Button mPlayVideoButton;
     private MoonPlayer mMoonPlayer = new MoonPlayer();
+    private String flag;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_hello_moon, container, false);
 
+        flag = getResources().getString(R.string.hellomoon_play);
+
         mPlayButton = (Button) v.findViewById(R.id.hello_moon_play_button);
+        if (mMoonPlayer.isPlay())
+            mPlayButton.setText(R.string.hellomoon_pause);
         mPlayButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                if (mPlayButton.getText().equals("Play")) {
+                //todo need debug
+                if (mPlayButton.getText().equals(flag)) {
                     mMoonPlayer.play(getActivity());
                     mPlayButton.setText(R.string.hellomoon_pause);
                 } else {
@@ -55,6 +68,7 @@ public class FragmentHelloMoon extends Fragment {
 
         return v;
     }
+
 
     @Override
     public void onDestroy() {

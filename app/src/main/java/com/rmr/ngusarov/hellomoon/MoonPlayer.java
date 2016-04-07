@@ -40,4 +40,10 @@ public class MoonPlayer {
         }
         return;
     }
+
+    public boolean isPlay() {
+        if (mPlayer == null)
+            return false;
+        return mPlayer.isPlaying();
+    }
 }
